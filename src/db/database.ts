@@ -25,7 +25,7 @@ const products: Product[] = [
         name: 'White Snow',
         category: 'HOODIE',
         image: hoodie_1,
-        price: 25.000,
+        price: 25000,
         description: 'A beautiful white hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
         stock: [
             {
@@ -48,7 +48,7 @@ const products: Product[] = [
         name: 'Sport Tan',
         category: 'HOODIE',
         image: hoodie_2,
-        price: 25.000,
+        price: 25000,
         description: 'A beautiful Tan hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
         stock: [
             {
@@ -71,7 +71,7 @@ const products: Product[] = [
         name: 'Sport Taupe',
         category: 'HOODIE',
         image: hoodie_3,
-        price: 25.000,
+        price: 25000,
         description: 'A beautiful Taupe hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
         stock: [
             {
@@ -94,7 +94,7 @@ const products: Product[] = [
         name: 'Cairo Beige',
         category: 'JACKET',
         image: jacket_1,
-        price: 30.000,
+        price: 30000,
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
         stock: [
             {
@@ -117,7 +117,7 @@ const products: Product[] = [
         name: 'Cairo Coral',
         category: 'JACKET',
         image: jacket_2,
-        price: 30.000,
+        price: 30000,
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
         stock: [
             {
@@ -140,7 +140,7 @@ const products: Product[] = [
         name: 'Varsity',
         category: 'JACKET',
         image: jacket_3,
-        price: 30.000,
+        price: 30000,
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
         stock: [
             {
@@ -163,7 +163,7 @@ const products: Product[] = [
         name: 'Cairo Beige',
         category: 'SHORTS',
         image: short_1,
-        price: 22.000,
+        price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
@@ -186,7 +186,7 @@ const products: Product[] = [
         name: 'Cairo Coral',
         category: 'SHORTS',
         image: short_2,
-        price: 22.000,
+        price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
@@ -209,7 +209,7 @@ const products: Product[] = [
         name: 'Cargo Beige',
         category: 'SHORTS',
         image: short_3,
-        price: 22.000,
+        price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
@@ -232,7 +232,7 @@ const products: Product[] = [
         name: 'Cargo Black',
         category: 'SHORTS',
         image: short_4,
-        price: 22.000,
+        price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
@@ -255,7 +255,7 @@ const products: Product[] = [
         name: 'Cairo Black',
         category: 'SHORTS',
         image: short_5,
-        price: 22.000,
+        price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
@@ -278,7 +278,7 @@ const products: Product[] = [
         name: 'Basic White',
         category: 'T-SHIRT',
         image: tshirt_1,
-        price: 14.000,
+        price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
@@ -301,7 +301,7 @@ const products: Product[] = [
         name: 'Basic Beige',
         category: 'T-SHIRT',
         image: tshirt_2,
-        price: 14.000,
+        price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
@@ -324,7 +324,7 @@ const products: Product[] = [
         name: 'Basic Black',
         category: 'T-SHIRT',
         image: tshirt_3,
-        price: 14.000,
+        price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
@@ -347,7 +347,7 @@ const products: Product[] = [
         name: 'Basic Second',
         category: 'T-SHIRT',
         image: tshirt_4,
-        price: 14.000,
+        price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
@@ -370,7 +370,7 @@ const products: Product[] = [
         name: 'Basic Cream',
         category: 'T-SHIRT',
         image: tshirt_5,
-        price: 14.000,
+        price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
@@ -388,3 +388,6 @@ const products: Product[] = [
         ]
     },
 ]
+
+
+export default products;
