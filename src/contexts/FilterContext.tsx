@@ -1,22 +1,24 @@
 import { createContext, useState } from "react";
 
-
-interface FilterState {
-    filter: string;
-}
+export type Filter = 'All' | 'T-shirt' | 'Hoodie' | 'Jacket' | 'Shorts';
 
 interface Props {
     children: JSX.Element[],
 }
 
-type Context = {
-    filter: string,
-    setFilter: React.Dispatch<React.SetStateAction<string>>
+interface FilterState {
+    filter: Filter;
 }
+
+type Context = {
+    filter: Filter,
+    setFilter: React.Dispatch<React.SetStateAction<Filter>>
+}
+
 
 export const FilterContext = createContext<Context>({
     filter: 'All',
-    setFilter: () => {}
+    setFilter: () => { }
 });
 
 export const FilterProvider = ({ children }: Props) => {

@@ -17,13 +17,14 @@ import tshirt_2 from '../assets/tshirt/polerabasica5.webp';
 import tshirt_3 from '../assets/tshirt/polerabasica6.webp';
 import tshirt_4 from '../assets/tshirt/polerabasica7.webp';
 import tshirt_5 from '../assets/tshirt/polerabasica8.webp';
+import { Product } from '../components/products/type';
 
 
 const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'White Snow',
-        category: 'HOODIE',
+        category: 'Hoodie',
         image: hoodie_1,
         price: 25000,
         description: 'A beautiful white hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
@@ -46,7 +47,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Sport Tan',
-        category: 'HOODIE',
+        category: 'Hoodie',
         image: hoodie_2,
         price: 25000,
         description: 'A beautiful Tan hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
@@ -69,7 +70,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Sport Taupe',
-        category: 'HOODIE',
+        category: 'Hoodie',
         image: hoodie_3,
         price: 25000,
         description: 'A beautiful Taupe hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
@@ -92,7 +93,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Cairo Beige',
-        category: 'JACKET',
+        category: 'Jacket',
         image: jacket_1,
         price: 30000,
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
@@ -115,7 +116,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Cairo Coral',
-        category: 'JACKET',
+        category: 'Jacket',
         image: jacket_2,
         price: 30000,
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
@@ -138,7 +139,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Varsity',
-        category: 'JACKET',
+        category: 'Jacket',
         image: jacket_3,
         price: 30000,
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
@@ -161,7 +162,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Cairo Beige',
-        category: 'SHORTS',
+        category: 'Shorts',
         image: short_1,
         price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
@@ -184,7 +185,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Cairo Coral',
-        category: 'SHORTS',
+        category: 'Shorts',
         image: short_2,
         price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
@@ -207,7 +208,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Cargo Beige',
-        category: 'SHORTS',
+        category: 'Shorts',
         image: short_3,
         price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
@@ -230,7 +231,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Cargo Black',
-        category: 'SHORTS',
+        category: 'Shorts',
         image: short_4,
         price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
@@ -253,7 +254,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Cairo Black',
-        category: 'SHORTS',
+        category: 'Shorts',
         image: short_5,
         price: 22000,
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
@@ -276,7 +277,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Basic White',
-        category: 'T-SHIRT',
+        category: 'T-shirt',
         image: tshirt_1,
         price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
@@ -299,7 +300,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Basic Beige',
-        category: 'T-SHIRT',
+        category: 'T-shirt',
         image: tshirt_2,
         price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
@@ -322,7 +323,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Basic Black',
-        category: 'T-SHIRT',
+        category: 'T-shirt',
         image: tshirt_3,
         price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
@@ -345,7 +346,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Basic Second',
-        category: 'T-SHIRT',
+        category: 'T-shirt',
         image: tshirt_4,
         price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
@@ -368,7 +369,7 @@ const products: Product[] = [
     {
         id: Date.now() + Math.random() * 1.3,
         name: 'Basic Cream',
-        category: 'T-SHIRT',
+        category: 'T-shirt',
         image: tshirt_5,
         price: 14000,
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",

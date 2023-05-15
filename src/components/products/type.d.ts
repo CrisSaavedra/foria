@@ -1,7 +1,9 @@
-interface Product {
+import { Filter } from "../../contexts/FilterContext"
+
+export interface Product {
     id: number,
     name: string,
-    category: 'HOODIE' | 'JACKET' | 'SHORTS' | 'T-SHIRT',
+    category: Filter,
     image: string,
     price: number,
     description: string,
@@ -9,7 +11,9 @@ interface Product {
 }
 
 interface Stock {
-    size: 'S' | 'L' | 'XL',
+    size: Size,
     stock: number
 }
 
+
+type Size = 'S' | 'L' | 'XL';

@@ -1,18 +1,34 @@
 import IonIcon from "@reacticons/ionicons"
 import products from "../../db/database"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { shuffle, toCLP } from "../../helpers/extraFunctions";
+import { Filter, FilterContext } from "../../contexts/FilterContext";
+import { Product } from "./type";
+
+
+interface ProductState {
+    products: Product[],
+}
 
 const Products = () => {
 
-    const [unsortProducts, setUnsortProducts] = useState<Product[]>([]);
+    const [unsortProducts, setUnsortProducts] = useState<ProductState['products']>([]);
+    const { filter } = useContext(FilterContext);
 
+
+    const filterProducts = (data: ProductState['products'], filter: Filter) => {
+        if (filter.includes('All')) {
+            setUnsortProducts(shuffle(data));
+        } else {
+            setUnsortProducts(products.filter(product => product.category === filter));
+        }
+    }
 
     useEffect(() => {
-        setUnsortProducts(shuffle(products));
+        filterProducts(products, filter);
+    }, [filter])
 
-       
-    }, [products])
+
 
 
     return (
@@ -34,8 +50,6 @@ const Products = () => {
                     )
                 })
             }
-
-
         </main>
     )
 }
