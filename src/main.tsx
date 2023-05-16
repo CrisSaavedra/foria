@@ -8,11 +8,13 @@ import './index.css'
 import ForiaApp from './ForiaApp'
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <ForiaApp />,
     errorElement: <h3>error de carga</h3>,
+    
   },
 ]);
 

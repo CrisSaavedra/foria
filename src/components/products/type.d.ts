@@ -16,4 +16,4 @@ interface Stock {
 }
 
 
-type Size = 'S' | 'L' | 'XL';
+type Size = 'M' | 'L' | 'XL';

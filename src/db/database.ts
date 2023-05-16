@@ -30,7 +30,7 @@ const products: Product[] = [
         description: 'A beautiful white hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 2,
             },
             {
@@ -53,7 +53,7 @@ const products: Product[] = [
         description: 'A beautiful Tan hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 2,
             },
             {
@@ -76,7 +76,7 @@ const products: Product[] = [
         description: 'A beautiful Taupe hooded sweatshirt, perfect for you, surprisingly comfortable, exquisite fabric, quality and warm.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 2,
             },
             {
@@ -99,7 +99,7 @@ const products: Product[] = [
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -122,7 +122,7 @@ const products: Product[] = [
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -145,7 +145,7 @@ const products: Product[] = [
         description: 'Great jacket, comfortable, exquisite for all occasions. If you are looking for something that suits you this is a very good option.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -168,7 +168,7 @@ const products: Product[] = [
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -191,7 +191,7 @@ const products: Product[] = [
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -214,7 +214,7 @@ const products: Product[] = [
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -237,7 +237,7 @@ const products: Product[] = [
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -260,7 +260,7 @@ const products: Product[] = [
         description: 'Enjoy great comfort, with these shorts. quality and beauty in one product. made with love for you to enjoy them everywhere.',
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -283,7 +283,7 @@ const products: Product[] = [
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -306,7 +306,7 @@ const products: Product[] = [
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -329,7 +329,7 @@ const products: Product[] = [
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -352,7 +352,7 @@ const products: Product[] = [
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
@@ -375,7 +375,7 @@ const products: Product[] = [
         description: "Enjoy the quality and strength of the basics, the must-have, the must-have for everyone's wardrobe. Really vivid colors and incredible durability, that's what we offer you.",
         stock: [
             {
-                size: 'S',
+                size: 'M',
                 stock: 1,
             },
             {
