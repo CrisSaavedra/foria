@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { Product, Stock } from "../products/type"
+import { Product } from "../products/type"
 import products from "../../db/database"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { toCLP } from "../../helpers/extraFunctions"
 import IonIcon from "@reacticons/ionicons"
 
@@ -26,14 +26,35 @@ const sizes = ['M', 'L', 'XL'];
 
 const DisplayProduct = () => {
 
-    const { id } = useParams();
+    const { productId } = useParams();
     const [dataProduct, setDataProduct] = useState<DisplayProductState['data']>(initalState);
+    const [selectSize, setSelectSize] = useState<string>('');
+
+    const onSelectSize = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, title: string) => {
+        e.preventDefault();
+        if (selectSize === title) {
+            setSelectSize('');
+        } else {
+            setSelectSize(title);
+        }
+    }
+
+
+    const onAddToCart = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault();
+        if (selectSize === '') {
+            //you must select one size
+        } else {
+            //redux cart;
+        }
+    }
+
 
 
     useEffect(() => {
-        // setDataProduct(products.find(product => product.id.toString() === id))
-        setDataProduct(products[0]);
-    }, [id])
+        let find = products.find(product => product.id.toString() === productId) || initalState;
+        setDataProduct(find)
+    }, [productId])
 
 
 
@@ -41,7 +62,7 @@ const DisplayProduct = () => {
 
         <main className=" w-11/12 mx-auto">
 
-            <a href="#"><IonIcon name='close-outline' size='large' className='text-stone-600 text-[1rem] mt-1' /></a>
+            <Link to='/products'><IonIcon name='close-outline' size='large' className='text-stone-600 text-[1rem] mt-1' /></Link>
             <section className="flex flex-col gap-5 mt-4 pb-4">
                 <img src={dataProduct.image} alt="product-img" />
                 <div className="flex flex-col gap-6">
@@ -56,7 +77,7 @@ const DisplayProduct = () => {
                             {
                                 sizes.map(title => {
                                     let stk = dataProduct.stock.find(stk => stk.size === title)
-                                    return (<button disabled={stk?.stock || 0 >= 1 ? false : true}  key={title} className={'rounded-full w-7 h-7 border border-stone-500 text-stone-500 text-sm hover:text-blue-50 hover:bg-stone-500 transition-colors disabled:bg-stone-500 disabled:hover:text-stone-500'
+                                    return (<button onClick={(e) => onSelectSize(e, title)} disabled={stk?.stock || 0 >= 1 ? false : true} key={title} className={selectSize === title ? `rounded-full w-7 h-7 border border-stone-700 text-sm  text-blue-50 bg-stone-700 transition-colors disabled:bg-stone-700 disabled:hover:text-stone-700 ` : `rounded-full w-7 h-7 border border-stone-700 text-stone-700 text-sm hover:text-blue-50 hover:bg-stone-700 transition-colors disabled:bg-stone-700 disabled:hover:text-stone-700`
                                     }> {title}</button>)
                                 })
                             }
@@ -69,7 +90,7 @@ const DisplayProduct = () => {
                         <p className="text-sm text-stone-500 font-medium">{dataProduct.description}</p>
                     </div>
                 </div>
-                <button className="bg-blue-50 w-11/12 mx-auto h-9 rounded-xl text-blue-400 font-medium border-blue-400 border-2 hover:bg-blue-400 hover:text-blue-50 transition-colors">Add to Cart</button>
+                <button onClick={onAddToCart} className="bg-blue-50 w-11/12 mx-auto h-9 rounded-xl text-blue-400 font-medium border-blue-400 border-2 hover:bg-blue-400 hover:text-blue-50 transition-colors">Add to Cart</button>
             </section>
         </main >
     )

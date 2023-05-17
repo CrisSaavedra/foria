@@ -1,27 +1,21 @@
-import { useState } from "react";
-import Filters from "./components/filters/Filters"
+import { useEffect } from "react";
 import Navbar from "./components/navbar/Navbar"
-import Products from "./components/products/Products"
-import { FilterProvider } from "./contexts/FilterContext"
-import DisplayProduct from "./components/product/DisplayProduct";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const ForiaApp = () => {
+    const navigate = useNavigate();
 
-    const [selectProduct, setSelectProduct] = useState(false);
+
+    useEffect(() => {
+        navigate('/products');
+    }, [])
+
 
     return (
         <>
             <header className="w-full mx-auto h-screen bg-blue-50 font-roboto">
                 <Navbar />
-
-                {
-                    selectProduct ? <FilterProvider>
-                        <Filters />
-                        <Products />
-                    </FilterProvider> : <DisplayProduct />
-                }
-
-
+                <Outlet />
             </header>
         </>
     )

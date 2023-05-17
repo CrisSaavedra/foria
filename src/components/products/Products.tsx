@@ -5,6 +5,7 @@ import { toCLP } from "../../helpers/extraFunctions";
 import { Filter, FilterContext } from "../../contexts/FilterContext";
 import { Product } from "./type";
 import LoadingMini from "../loaders/LoadingMini";
+import { useNavigate } from "react-router-dom";
 
 
 interface ProductState {
@@ -17,6 +18,7 @@ const Products = () => {
     const [dataProducts, setdataProducts] = useState<ProductState['products']>([]);
     const [isLoading, setIsLoading] = useState<ProductState['loading']>(true);
     const { filter } = useContext(FilterContext);
+    const navigate = useNavigate();
 
 
 
@@ -29,7 +31,7 @@ const Products = () => {
 
         setTimeout(() => {
             setIsLoading(false);
-        }, 1000);
+        }, 300);
     }
 
     useEffect(() => {
@@ -37,6 +39,11 @@ const Products = () => {
     }, [filter])
 
 
+
+    const onClickAdd = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, idProduct: number) => {
+        e.preventDefault();
+        navigate('/products/' + idProduct);
+    }
 
 
     return (
@@ -52,7 +59,7 @@ const Products = () => {
                                     <h4 className="text-stone-700 font-medium mt-1">{product.name}</h4>
                                     <div className="flex justify-between ">
                                         <p className="text-stone-500 text-[.9rem] font-medium mt-[.4rem]">$ {toCLP(product.price)}</p>
-                                        <button type="button" ><IonIcon name='add-outline' size='large' className="text-[.9rem] text-blue-400  pr-1" /></button>
+                                        <button onClick={e => onClickAdd(e, product.id)} type="button" ><IonIcon name='add-outline' size='large' className="text-[.9rem] text-blue-400  pr-1" /></button>
                                     </div>
                                 </div>
                             </div>
