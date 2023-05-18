@@ -1,15 +1,15 @@
 import { createContext } from "react";
 import { useCart } from "../hooks/useCart";
-import { Product } from "../components/products/type";
+import { CartProduct } from "../hooks/type";
 
 
 interface Props {
-    children: JSX.Element[]
+    children: JSX.Element[] | JSX.Element
 }
 
 interface CartState {
-    state: Product[],
-    addProductHandle: (idProduct: Product) => void,
+    state: CartProduct[],
+    addProductHandle: (product: CartProduct) => void,
     removeProductHandle: (idProduct: number) => void
 }
 

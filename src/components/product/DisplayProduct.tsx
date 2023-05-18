@@ -9,7 +9,7 @@ const sizes = ['M', 'L', 'XL'];
 const DisplayProduct = () => {
 
     const { dataProduct, selectSize, onAddToCart, onSelectSize } = useDisplay();
-
+    
     return (
 
         <main className=" w-11/12 mx-auto">

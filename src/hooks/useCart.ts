@@ -1,21 +1,20 @@
 import { useReducer } from "react"
-import { Product } from "../components/products/type"
+import { CartProduct } from "./type";
 
-interface Cart {
-    cart: Product[]
+interface CartState {
+    cart: CartProduct[]
 }
-
 
 type CartAction = {
     type: 'add-to-cart',
-    payload: Product;
+    payload: CartProduct
 } |
 {
     type: 'remove-from-cart',
     payload: number
 }
 
-const cartReducer = (state: Cart['cart'], action: CartAction) => {
+const cartReducer = (state: CartState['cart'], action: CartAction) => {
 
     switch (action.type) {
         case 'add-to-cart':
@@ -32,7 +31,7 @@ export const useCart = () => {
 
     const [state, dispatch] = useReducer(cartReducer, []);
 
-    const addProductHandle = (newProduct: Product) => {
+    const addProductHandle = (newProduct: CartProduct) => {
         dispatch({
             type: 'add-to-cart',
             payload: newProduct,

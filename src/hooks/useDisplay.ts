@@ -3,12 +3,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import products from "../db/database";
 import { Product } from "../components/products/type";
+import { CartProduct } from "./type";
 
 
 interface DisplayProductState {
     data: Product
 }
-
 
 const initalState: Product = {
     id: 0,
@@ -21,7 +21,7 @@ const initalState: Product = {
 }
 
 export const useDisplay = () => {
-    
+
     const { productId } = useParams();
     const [dataProduct, setDataProduct] = useState<DisplayProductState['data']>(initalState);
     const [selectSize, setSelectSize] = useState<string>('');
@@ -45,10 +45,14 @@ export const useDisplay = () => {
         } else {
             const find = state.find(product => product.id === dataProduct.id)
             if (find === undefined) {
-                addProductHandle(dataProduct);
+                const { stock, ...data } = dataProduct;
+                const cartProduct: CartProduct = {
+                    ...data,
+                    size: selectSize
+                }
+                addProductHandle(cartProduct);
                 navigate('/products');
 
-                // Clear Component and add Size selected to product
             } else {
                 alert('The product is already in the cart 😅');
             }

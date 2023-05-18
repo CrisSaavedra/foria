@@ -10,7 +10,8 @@ import Products from './components/products/Products';
 import DisplayProduct from './components/product/DisplayProduct';
 import { FilterProvider } from './contexts/FilterContext';
 import Filters from './components/filters/Filters';
-
+import Cart from './components/cart/Cart';
+import CartProvider from './contexts/CartContext';
 
 
 const router = createBrowserRouter([
@@ -30,14 +31,25 @@ const router = createBrowserRouter([
       {
         path: "/products/:productId",
         element: <DisplayProduct />
-      }
+      },
+      // {
+      //   path: "/cart",
+      //   element: <Cart />
+      // }
     ]
 
   },
+
+  {
+    path: "/cart",
+    element: <Cart />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>,
 )
