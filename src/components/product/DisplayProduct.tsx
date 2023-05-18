@@ -1,62 +1,14 @@
-import { useEffect, useState } from "react"
-import { Product } from "../products/type"
-import products from "../../db/database"
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { toCLP } from "../../helpers/extraFunctions"
 import IonIcon from "@reacticons/ionicons"
 
-
-
-interface DisplayProductState {
-    data: Product
-}
-
-
-const initalState: Product = {
-    id: 0,
-    name: '',
-    category: "All",
-    image: '',
-    price: 0,
-    description: '',
-    stock: [],
-}
+import { useDisplay } from "../../hooks/useDisplay"
 
 const sizes = ['M', 'L', 'XL'];
 
 const DisplayProduct = () => {
 
-    const { productId } = useParams();
-    const [dataProduct, setDataProduct] = useState<DisplayProductState['data']>(initalState);
-    const [selectSize, setSelectSize] = useState<string>('');
-
-    const onSelectSize = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, title: string) => {
-        e.preventDefault();
-        if (selectSize === title) {
-            setSelectSize('');
-        } else {
-            setSelectSize(title);
-        }
-    }
-
-
-    const onAddToCart = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault();
-        if (selectSize === '') {
-            //you must select one size
-        } else {
-            //redux cart;
-        }
-    }
-
-
-
-    useEffect(() => {
-        let find = products.find(product => product.id.toString() === productId) || initalState;
-        setDataProduct(find)
-    }, [productId])
-
-
+    const { dataProduct, selectSize, onAddToCart, onSelectSize } = useDisplay();
 
     return (
 
@@ -82,7 +34,6 @@ const DisplayProduct = () => {
                                 })
                             }
 
-
                         </div>
                     </div>
                     <div className="flex flex-col gap-2">
@@ -90,7 +41,7 @@ const DisplayProduct = () => {
                         <p className="text-sm text-stone-500 font-medium">{dataProduct.description}</p>
                     </div>
                 </div>
-                <button onClick={onAddToCart} className="bg-blue-50 w-11/12 mx-auto h-9 rounded-xl text-blue-400 font-medium border-blue-400 border-2 hover:bg-blue-400 hover:text-blue-50 transition-colors">Add to Cart</button>
+                <button onClick={e => onAddToCart(e, dataProduct, selectSize)} className="bg-blue-50 w-11/12 mx-auto h-9 rounded-xl text-blue-400 font-medium border-blue-400 border-2 hover:bg-blue-400 hover:text-blue-50 transition-colors">Add to Cart</button>
             </section>
         </main >
     )
