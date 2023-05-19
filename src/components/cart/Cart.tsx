@@ -25,8 +25,8 @@ const Cart = ({changeCartVisibility}:Props) => {
     }
 
     return (
-        <div className="fixed h-screen w-full z-20">
-            <div className="fixed bg-blue-50 h-screen right-0 w-10/12 max-w-[22rem] z-20">
+        <div className="fixed h-screen w-full z-20 ">
+            <div className="fixed bg-stone-50 h-screen right-0 w-10/12 max-w-[22rem] z-20 animate-openCart">
 
                 <div className="flex flex-col w-11/12 mx-auto  pt-5 justify-between h-[94vh] max-h-screen ">
                     <div>

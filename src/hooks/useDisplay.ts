@@ -69,7 +69,7 @@ export const useDisplay = () => {
                 navigate('/products');
 
             } else {
-                changeAlertState('Size is already in the cart!');
+                changeAlertState('Product is already in the cart!');
             }
         }
     }

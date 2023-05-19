@@ -20,13 +20,12 @@ const ForiaApp = () => {
 
     return (
         <>
-            <div className="w-full bg-blue-50 ">
-                <div className="max-w-max flex flex-col mx-auto">
+            <div className="w-full bg-blue-50  overflow-hidden mx-auto min-h-screen animate-initPage">
+                <div className="max-w-[40rem] flex flex-col mx-auto">
                     <Navbar changeCartVisibility={changeCartVisibility} />
                     {
                         cartVisibility ? <Cart changeCartVisibility={changeCartVisibility}/> : null
                     }
-
                     <Outlet />
                 </div>
             </div>

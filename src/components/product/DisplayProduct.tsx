@@ -19,8 +19,8 @@ const DisplayProduct = () => {
 
                 <Link to='/products'><IonIcon name='close-outline' size='large' className='text-stone-600 text-[1rem] mt-1' /></Link>
                 <section className="flex flex-col gap-5 mt-4 pb-4">
-                    <img src={dataProduct?.image} alt="product-img" />
-                    <div className="flex flex-col gap-6">
+                    <img src={dataProduct?.image} alt={dataProduct.description}  className="max-h-[30rem] mx-auto "/>
+                    <div className="flex flex-col gap-6 ">
                         <div className="flex justify-between items-center">
                             <h3 className="text-stone-700 text-xl font-medium">{dataProduct?.name}</h3>
                             <p className="text-stone-500">{`$ ` + toCLP(dataProduct?.price)}</p>

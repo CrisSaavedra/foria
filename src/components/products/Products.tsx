@@ -29,13 +29,14 @@ const Products = () => {
             setdataProducts(products.filter(product => product.category === filter));
         }
 
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 300);
+       
     }
 
     useEffect(() => {
         filterProducts(products, filter);
+        setTimeout(() => {
+            setIsLoading(false);
+            }, 800);
     }, [filter])
 
 
@@ -47,14 +48,19 @@ const Products = () => {
 
 
     return (
-        <main className=" mt-4 grid grid-cols-2 justify-items-center gap-y-2 max-w-xl min-w-max">
 
-            {
-                !isLoading ?
+        <>
+
+
+            <main className=" mt-4 grid grid-cols-2 justify-items-center gap-y-2 min-w-max ">
+                {
+                    !isLoading ? null : <LoadingMini />
+                }
+                {
                     dataProducts.map(product => {
                         return (
                             <div key={product.id} className="flex flex-col w-44">
-                                <img className="rounded-t-lg h-60 w-44" src={product.image} alt="product_img" />
+                                <img className="rounded-t-lg h-60 w-44" src={product.image} alt={product.description} />
                                 <div>
                                     <h4 className="text-stone-700 font-medium mt-1">{product.name}</h4>
                                     <div className="flex justify-between ">
@@ -65,10 +71,13 @@ const Products = () => {
                             </div>
                         )
                     })
-                    :
-                    <LoadingMini />
-            }
-        </main>
+                }
+
+
+            </main>
+
+        </>
+
     )
 }
 
