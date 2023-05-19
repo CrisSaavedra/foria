@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
@@ -14,7 +14,7 @@ import CartProvider from './contexts/CartContext';
 import ErrorPage from './components/errorpage/ErrorPage';
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <ForiaApp />,
