@@ -1,3 +1,4 @@
+
 import hoodie_1 from '../assets/hoodie/hoodieblancoinvierno1.webp';
 import hoodie_2 from '../assets/hoodie/hoodietan1.webp';
 import hoodie_3 from '../assets/hoodie/hoodietaupe1.webp';
@@ -22,7 +23,7 @@ import { Product } from '../components/products/type';
 
 const products: Product[] = [
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 12,
         name: 'White Snow',
         category: 'Hoodie',
         image: hoodie_1,
@@ -45,7 +46,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 123,
         name: 'Sport Tan',
         category: 'Hoodie',
         image: hoodie_2,
@@ -68,7 +69,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 1234,
         name: 'Sport Taupe',
         category: 'Hoodie',
         image: hoodie_3,
@@ -91,7 +92,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 12341,
         name: 'Cairo Beige',
         category: 'Jacket',
         image: jacket_1,
@@ -114,7 +115,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 12345,
         name: 'Cairo Coral',
         category: 'Jacket',
         image: jacket_2,
@@ -137,7 +138,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 123456,
         name: 'Varsity',
         category: 'Jacket',
         image: jacket_3,
@@ -160,7 +161,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 1234567,
         name: 'Cairo Beige',
         category: 'Shorts',
         image: short_1,
@@ -183,7 +184,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 12345678,
         name: 'Cairo Coral',
         category: 'Shorts',
         image: short_2,
@@ -206,7 +207,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 123456789,
         name: 'Cargo Beige',
         category: 'Shorts',
         image: short_3,
@@ -229,7 +230,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 9,
         name: 'Cargo Black',
         category: 'Shorts',
         image: short_4,
@@ -252,7 +253,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 98,
         name: 'Cairo Black',
         category: 'Shorts',
         image: short_5,
@@ -275,7 +276,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 987,
         name: 'Basic White',
         category: 'T-shirt',
         image: tshirt_1,
@@ -298,7 +299,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 9876,
         name: 'Basic Beige',
         category: 'T-shirt',
         image: tshirt_2,
@@ -321,7 +322,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 98765,
         name: 'Basic Black',
         category: 'T-shirt',
         image: tshirt_3,
@@ -344,7 +345,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 987654,
         name: 'Basic Second',
         category: 'T-shirt',
         image: tshirt_4,
@@ -367,7 +368,7 @@ const products: Product[] = [
         ]
     },
     {
-        id: Date.now() + Math.random() * 1.3,
+        id: 9876543,
         name: 'Basic Cream',
         category: 'T-shirt',
         image: tshirt_5,

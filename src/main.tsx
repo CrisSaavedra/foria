@@ -1,24 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
-import ForiaApp from './ForiaApp'
+import './index.css';
+import ForiaApp from './ForiaApp';
 import Products from './components/products/Products';
 import DisplayProduct from './components/product/DisplayProduct';
 import { FilterProvider } from './contexts/FilterContext';
 import Filters from './components/filters/Filters';
-import Cart from './components/cart/Cart';
 import CartProvider from './contexts/CartContext';
+import ErrorPage from './components/errorpage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <ForiaApp />,
-    errorElement: <h3>error de carga</h3>,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/products",
@@ -35,10 +35,9 @@ const router = createBrowserRouter([
     ]
 
   },
-
   {
-    path: "/cart",
-    element: <Cart />
+    path: "*",
+    element: <ErrorPage/>
   }
 ]);
 

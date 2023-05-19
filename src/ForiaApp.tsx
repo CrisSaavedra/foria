@@ -1,9 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/navbar/Navbar"
 import { Outlet, useNavigate } from "react-router-dom";
+import Cart from "./components/cart/Cart";
 
 const ForiaApp = () => {
     const navigate = useNavigate();
+    const [cartVisibility, setCartVisibility] = useState(false);
+
+    const changeCartVisibility = () => {
+        setCartVisibility(!cartVisibility);
+    }
 
 
     useEffect(() => {
@@ -11,14 +17,19 @@ const ForiaApp = () => {
     }, [])
 
 
+
     return (
         <>
-            <header className="w-full h-screen bg-blue-50 font-roboto ">
+            <div className="w-full bg-blue-50 ">
                 <div className="max-w-max flex flex-col mx-auto">
-                    <Navbar />
+                    <Navbar changeCartVisibility={changeCartVisibility} />
+                    {
+                        cartVisibility ? <Cart changeCartVisibility={changeCartVisibility}/> : null
+                    }
+
                     <Outlet />
                 </div>
-            </header>
+            </div>
         </>
     )
 }
