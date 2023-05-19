@@ -10,9 +10,9 @@ interface Props {
 }
 
 
-const Cart = ({changeCartVisibility}:Props) => {
+const Cart = ({ changeCartVisibility }: Props) => {
 
-    const { state, removeProductHandle } = useContext(CartContext);
+    const { state, removeProductHandle, clearCardHandle } = useContext(CartContext);
 
     const onCloseClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
@@ -47,7 +47,7 @@ const Cart = ({changeCartVisibility}:Props) => {
                             <h4 className="text-stone-600 text-lg ">Total:</h4>
                             <p className="text-stone-700 text-xl ">${toCLP(calculateTotalPrice())}</p>
                         </div>
-                        <button type="button" className="bg-blue-400 w-full mx-auto h-11 rounded-xl text-blue-50 font-medium border-blue-400 border-2 hover:bg-blue-50 hover:text-blue-400 transition-colors mt-5">Checkout</button>
+                        <button onClick={clearCardHandle} type="button" className="bg-blue-400 w-full mx-auto h-11 rounded-xl text-blue-50 font-medium border-blue-400 border-2 hover:bg-blue-50 hover:text-blue-400 transition-colors mt-5">Checkout</button>
                     </div>
 
 

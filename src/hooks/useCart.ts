@@ -12,6 +12,10 @@ type CartAction = {
 {
     type: 'remove-from-cart',
     payload: number
+} |
+{
+    type: 'clean-cart',
+
 }
 
 const cartReducer = (state: CartState['cart'], action: CartAction) => {
@@ -23,6 +27,8 @@ const cartReducer = (state: CartState['cart'], action: CartAction) => {
         case 'remove-from-cart':
             return state.filter(product => product.id != action.payload);
 
+        case 'clean-cart':
+            return initalState;
     }
 }
 
@@ -49,7 +55,7 @@ export const useCart = () => {
             type: 'add-to-cart',
             payload: newProduct,
         })
-        
+
     }
 
     const removeProductHandle = (idProduct: number) => {
@@ -59,6 +65,11 @@ export const useCart = () => {
         })
     }
 
+    const clearCardHandle = () => {
+        dispatch({
+            type:"clean-cart"
+        })
+    }
 
 
 
@@ -72,6 +83,7 @@ export const useCart = () => {
     return {
         state,
         addProductHandle,
-        removeProductHandle
+        removeProductHandle,
+        clearCardHandle
     }
 }

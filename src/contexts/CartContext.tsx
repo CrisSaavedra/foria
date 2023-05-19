@@ -10,23 +10,25 @@ interface Props {
 interface CartState {
     state: CartProduct[],
     addProductHandle: (product: CartProduct) => void,
-    removeProductHandle: (idProduct: number) => void
+    removeProductHandle: (idProduct: number) => void,
+    clearCardHandle: () => void
 }
 
 const initalState: CartState = {
     state: [],
     addProductHandle: () => { },
-    removeProductHandle: () => { }
+    removeProductHandle: () => { },
+    clearCardHandle: () => { }
 }
 
 export const CartContext = createContext<CartState>(initalState);
 
 const CartProvider = ({ children }: Props) => {
 
-    const { state, addProductHandle, removeProductHandle } = useCart();
+    const { state, addProductHandle, removeProductHandle, clearCardHandle } = useCart();
 
     return (
-        <CartContext.Provider value={{ state, addProductHandle, removeProductHandle }}>
+        <CartContext.Provider value={{ state, addProductHandle, removeProductHandle, clearCardHandle }}>
             {children}
         </CartContext.Provider>
     )
