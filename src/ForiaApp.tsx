@@ -21,7 +21,7 @@ const ForiaApp = () => {
     return (
         <>
             <div className="w-full bg-blue-50  overflow-hidden mx-auto min-h-screen animate-initPage">
-                <div className="max-w-[40rem] flex flex-col mx-auto">
+                <div className="max-w-[40rem] flex flex-col mx-auto lg:max-w-[65rem]">
                     <Navbar changeCartVisibility={changeCartVisibility} />
                     {
                         cartVisibility ? <Cart changeCartVisibility={changeCartVisibility}/> : null

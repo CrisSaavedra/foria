@@ -13,19 +13,19 @@ const DisplayProduct = () => {
     return (
         <>
             {
-                alert.state ? <StandardAlert changeAlertState={changeAlertState} alert={alert.msg}/> : null
+                alert.state ? <StandardAlert changeAlertState={changeAlertState} alert={alert.msg} /> : null
             }
             <main className=" w-11/12 mx-auto">
 
                 <Link to='/products'><IonIcon name='close-outline' size='large' className='text-stone-600 text-[1rem] mt-1' /></Link>
-                <section className="flex flex-col gap-5 mt-4 pb-4">
-                    <img src={dataProduct?.image} alt={dataProduct.description}  className="max-h-[30rem] mx-auto "/>
-                    <div className="flex flex-col gap-6 ">
+                <section className="flex flex-col gap-5 mt-4 pb-4 lg:flex-row">
+                    <img src={dataProduct?.image} alt={dataProduct.description} className="max-h-[30rem] mx-auto lg:max-h-[40rem]" />
+                    <div className="flex flex-col gap-6 justify-center">
                         <div className="flex justify-between items-center">
                             <h3 className="text-stone-700 text-xl font-medium">{dataProduct?.name}</h3>
                             <p className="text-stone-500">{`$ ` + toCLP(dataProduct?.price)}</p>
                         </div>
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-3 ">
                             <h4 className="text-base text-stone-600 font-medium">Select Size</h4>
                             <div className="flex gap-4 ">
 
@@ -43,8 +43,10 @@ const DisplayProduct = () => {
                             <h4 className="text-base text-stone-600 font-medium">Description</h4>
                             <p className="text-sm text-stone-500 font-medium">{dataProduct.description}</p>
                         </div>
+
+                        <button onClick={e => onAddToCart(e, dataProduct, selectSize)} className="bg-blue-50 w-11/12 mx-auto h-9 rounded-xl text-blue-400 font-medium border-blue-400 border-2 hover:bg-blue-400 hover:text-blue-50 transition-colors mt-5">Add to Cart</button>
                     </div>
-                    <button onClick={e => onAddToCart(e, dataProduct, selectSize)} className="bg-blue-50 w-11/12 mx-auto h-9 rounded-xl text-blue-400 font-medium border-blue-400 border-2 hover:bg-blue-400 hover:text-blue-50 transition-colors">Add to Cart</button>
+
                 </section>
 
 

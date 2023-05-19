@@ -52,7 +52,7 @@ const Products = () => {
         <>
 
 
-            <main className=" mt-4 grid grid-cols-2 justify-items-center gap-y-2 min-w-max ">
+            <main className=" mt-4 grid grid-cols-2 justify-items-center gap-y-2 min-w-max lg:grid-cols-4 ">
                 {
                     !isLoading ? null : <LoadingMini />
                 }
