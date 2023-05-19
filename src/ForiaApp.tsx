@@ -13,9 +13,11 @@ const ForiaApp = () => {
 
     return (
         <>
-            <header className="w-full mx-auto h-screen bg-blue-50 font-roboto">
-                <Navbar />
-                <Outlet />
+            <header className="w-full h-screen bg-blue-50 font-roboto ">
+                <div className="max-w-max flex flex-col mx-auto">
+                    <Navbar />
+                    <Outlet />
+                </div>
             </header>
         </>
     )

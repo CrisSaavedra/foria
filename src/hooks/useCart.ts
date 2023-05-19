@@ -1,4 +1,4 @@
-import { useReducer } from "react"
+import { useEffect, useReducer } from "react"
 import { CartProduct } from "./type";
 
 interface CartState {
@@ -26,16 +26,30 @@ const cartReducer = (state: CartState['cart'], action: CartAction) => {
     }
 }
 
+const initalState: CartProduct[] = [];
+
+const loadLocalStorage = () => {
+
+    const cartItems = localStorage.getItem('cartItems');
+    if (cartItems) {
+        return JSON.parse(cartItems);
+    }
+
+    return [];
+
+
+}
 
 export const useCart = () => {
 
-    const [state, dispatch] = useReducer(cartReducer, []);
+    const [state, dispatch] = useReducer(cartReducer, initalState, loadLocalStorage);
 
     const addProductHandle = (newProduct: CartProduct) => {
         dispatch({
             type: 'add-to-cart',
             payload: newProduct,
         })
+        
     }
 
     const removeProductHandle = (idProduct: number) => {
@@ -44,6 +58,16 @@ export const useCart = () => {
             payload: idProduct,
         })
     }
+
+
+
+
+
+
+    useEffect(() => {
+        localStorage.setItem('cartItems', JSON.stringify(state));
+    }, [state])
+
 
     return {
         state,

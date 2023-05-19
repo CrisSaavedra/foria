@@ -47,14 +47,14 @@ const Products = () => {
 
 
     return (
-        <main className="mx-auto mt-4 grid grid-cols-2 justify-items-center gap-y-2">
+        <main className=" mt-4 grid grid-cols-2 justify-items-center gap-y-2 max-w-xl min-w-max">
 
             {
                 !isLoading ?
                     dataProducts.map(product => {
                         return (
-                            <div key={product.id} className="flex flex-col w-11/12">
-                                <img className="rounded-t-lg h-60" src={product.image} alt="product_img" />
+                            <div key={product.id} className="flex flex-col w-44">
+                                <img className="rounded-t-lg h-60 w-44" src={product.image} alt="product_img" />
                                 <div>
                                     <h4 className="text-stone-700 font-medium mt-1">{product.name}</h4>
                                     <div className="flex justify-between ">
