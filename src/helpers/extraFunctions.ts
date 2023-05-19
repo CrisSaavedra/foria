@@ -1,6 +1,3 @@
-export const shuffle = (products:Product[]) => {
-    return products.sort(() => Math.random() - 0.2);
-}
 
 export const toCLP = (price: number): string => {
     let str = price.toString();
