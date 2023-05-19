@@ -26,7 +26,7 @@ const Cart = ({ changeCartVisibility }: Props) => {
 
     return (
         <div className="fixed h-screen w-full z-20 ">
-            <div className="fixed bg-stone-50 h-screen right-0 w-10/12 max-w-[22rem] z-20 animate-openCart">
+            <div className="fixed bg-blue-100 h-screen right-0 w-10/12 max-w-[22rem] z-20 animate-openCart">
 
                 <div className="flex flex-col w-11/12 mx-auto  pt-5 justify-between h-[94vh] max-h-screen ">
                     <div>
@@ -35,15 +35,15 @@ const Cart = ({ changeCartVisibility }: Props) => {
                             <button onClick={onCloseClick}><IonIcon name="close-outline" size="large" className="text-stone-600"></IonIcon></button>
                         </div>
 
-                        <div className=" mt-6 font-medium text-stone-500 overflow-y-auto flex flex-col gap-3 h-[66vh]">
+                        <div className=" mt-6 font-medium text-stone-500 overflow-y-auto flex flex-col gap-3 h-[66vh] ">
 
                             <DisplayCartProduct removeProduct={removeProductHandle} products={state} />
 
                         </div>
                     </div>
 
-                    <div className="flex flex-col  ">
-                        <div className="flex justify-between mt-10 items-center font-medium">
+                    <div className="flex flex-col  mb-14 ">
+                        <div className="flex justify-between items-center font-medium">
                             <h4 className="text-stone-600 text-lg ">Total:</h4>
                             <p className="text-stone-700 text-xl ">${toCLP(calculateTotalPrice())}</p>
                         </div>
